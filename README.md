@@ -3,9 +3,27 @@ After making "Mation," I decided to take it one step further by creating Mation-
 # File Info
 The "File Info" section contains detailed information for all of the "A" files.
 Now instead of just copying and pasting a random file, you can tell what animation it holds.
-| File          | Status   | Animation                  |
-|---------------|----------|----------------------------|
-| Authentication| ✅       | User login and registration|
-| API           | ⚡       | RESTful endpoints          |
-| UI            | 🚧       | Work in progress           |
-| Docs          | ✅       | Complete documentation     |
+| File          | Animation                  |
+|---------------|----------------------------|
+| A-1.html      | Neon Explosion             |
+| A-2.html      |                            |   
+| A-3.html      |                            |
+| A-4.html      |                            |
+| A-5.html      |                            |
+| A-6.html      |                            |
+| A-7.html      |                            |
+| A-8.html      |                            |
+| A-9.html      |                            |
+| A-10.html     |                            |
+| A-11.html     |                            |
+| A-12.html     |                            |
+| A-13.html     |                            |
+|   A-14.html   |                            |
+|               |                            |
+|               |                            |
+|               |                            |
+|               |                            |
+|               |                            |
+|               |                            |
+|               |                            |
+|               |                            |

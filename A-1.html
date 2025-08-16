@@ -13,7 +13,6 @@
       height: 100%;
       width: 100%;
     }
-
     canvas {
       display: block;
     }
@@ -21,15 +20,19 @@
 </head>
 <body>
   <canvas id="explosionCanvas"></canvas>
-
   <script>
     const canvas = document.getElementById("explosionCanvas");
     const ctx = canvas.getContext("2d");
 
     let width, height;
     function resize() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      width = canvas.width = window.innerWidth * dpr;
+      height = canvas.height = window.innerHeight * dpr;
+      canvas.style.width = window.innerWidth + "px";
+      canvas.style.height = window.innerHeight + "px";
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(dpr, dpr);
     }
     window.addEventListener("resize", resize);
     resize();
@@ -49,15 +52,13 @@
         this.life = 100;
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
-        this.vx *= 0.98;  // slow down
+        this.vx *= 0.98;
         this.vy *= 0.98;
         this.life -= 1;
       }
-
       draw(ctx) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -67,7 +68,6 @@
         ctx.fill();
         ctx.closePath();
       }
-
       isAlive() {
         return this.life > 0;
       }
@@ -80,8 +80,14 @@
     }
 
     canvas.addEventListener("click", (e) => {
-      spawnExplosion(e.clientX, e.clientY);
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX - rect.left);
+      const y = (e.clientY - rect.top);
+      spawnExplosion(x, y);
     });
+
+    // For testing: spawn one at the center on load
+    spawnExplosion(window.innerWidth / 2, window.innerHeight / 2);
 
     function animate() {
       ctx.fillStyle = "rgba(0, 0, 0, 0.2)";

@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Hypnotic Illusion</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #000 0%, #111 100%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
 
+    .illusion {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 8px solid transparent;
+      border-top-color: white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 2s linear infinite;
+      box-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Add multiple rings with custom sizes, speeds, directions, and colors */
+    .ring:nth-child(1) {
+      width: 380px;
+      height: 380px;
+      border-top-color: #00ffe0;
+      animation-duration: 3.5s;
+    }
+
+    .ring:nth-child(2) {
+      width: 330px;
+      height: 330px;
+      border-top-color: #ff00c8;
+      animation-direction: reverse;
+      animation-duration: 3s;
+      box-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
+    }
+
+    .ring:nth-child(3) {
+      width: 280px;
+      height: 280px;
+      border-top-color: #00ff7f;
+      animation-duration: 2.5s;
+      box-shadow: 0 0 10px #00ff7f, 0 0 20px #00ff7f;
+    }
+
+    .ring:nth-child(4) {
+      width: 230px;
+      height: 230px;
+      border-top-color: #ffd700;
+      animation-direction: reverse;
+      animation-duration: 2s;
+      box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    }
+
+    .ring:nth-child(5) {
+      width: 180px;
+      height: 180px;
+      border-top-color: #1e90ff;
+      animation-duration: 1.8s;
+      box-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
+    }
+
+    .ring:nth-child(6) {
+      width: 130px;
+      height: 130px;
+      border-top-color: #ff6347;
+      animation-direction: reverse;
+      animation-duration: 1.6s;
+      box-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
+    }
+
+    .ring:nth-child(7) {
+      width: 80px;
+      height: 80px;
+      border-top-color: #ffffff;
+      animation-duration: 1.2s;
+      box-shadow: 0 0 10px #ffffff, 0 0 25px #ffffff;
+    }
+
+    /* Spin keyframes */
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    /* Hover effect: speed up and glow brighter */
+    .illusion:hover .ring {
+      animation-duration: 0.8s !important;
+      filter: brightness(1.5);
+      box-shadow: 0 0 20px #fff, 0 0 40px currentColor;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="illusion">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+</body>
+</html>

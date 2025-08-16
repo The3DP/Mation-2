@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hypnotic Illusion</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
 
+    .illusion {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      border: 10px solid transparent;
+      border-top-color: #00ffe0;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 2s linear infinite;
+    }
+
+    .ring:nth-child(2) {
+      width: 250px;
+      height: 250px;
+      border-top-color: #ff00c8;
+      animation-direction: reverse;
+      animation-duration: 2.5s;
+    }
+
+    .ring:nth-child(3) {
+      width: 200px;
+      height: 200px;
+      border-top-color: #00ff7f;
+      animation-duration: 3s;
+    }
+
+    .ring:nth-child(4) {
+      width: 150px;
+      height: 150px;
+      border-top-color: #ffd700;
+      animation-direction: reverse;
+      animation-duration: 3.5s;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="illusion">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+</body>
+</html>

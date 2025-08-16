@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sepia Animation</title>
+  <style>
+    body {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
+    .sepia-image {
+      width: 400px;
+      height: auto;
+      animation: sepiaPulse 6s infinite ease-in-out;
+      transition: filter 1s ease;
+    }
+
+    @keyframes sepiaPulse {
+      0% {
+        filter: grayscale(100%) sepia(0%);
+      }
+      50% {
+        filter: grayscale(0%) sepia(100%);
+      }
+      100% {
+        filter: grayscale(100%) sepia(0%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://picsum.photos/600/400" alt="Sepia Animation" class="sepia-image">
+
+</body>
+</html>

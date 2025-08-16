@@ -14,7 +14,7 @@ Now instead of just copying and pasting a random file, you can know what animati
 | A-3.html      | Multiple Sepia Images      |
 | A-4.html      | Small Hyptonic Illusion    |
 | A-5.html      | Enhanced Hyptonic Illusion |
-| A-6.html      |                            |
+| A-6.html      | Cool Enhanced 3D Illusion  |
 | A-7.html      |                            |
 | A-8.html      |                            |
 | A-9.html      |                            |

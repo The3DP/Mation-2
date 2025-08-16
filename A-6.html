@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Interactive Illusion</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #000, #111);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
+    .container {
+      perspective: 1000px;
+    }
+
+    .illusion {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease;
+    }
+
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 8px solid transparent;
+      border-top-color: white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 2s linear infinite;
+      box-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .ring:nth-child(1) {
+      width: 380px;
+      height: 380px;
+      border-top-color: #00ffe0;
+      animation-duration: 3.5s;
+    }
+
+    .ring:nth-child(2) {
+      width: 330px;
+      height: 330px;
+      border-top-color: #ff00c8;
+      animation-direction: reverse;
+      animation-duration: 3s;
+      box-shadow: 0 0 10px #ff00c8, 0 0 20px #ff00c8;
+    }
+
+    .ring:nth-child(3) {
+      width: 280px;
+      height: 280px;
+      border-top-color: #00ff7f;
+      animation-duration: 2.5s;
+      box-shadow: 0 0 10px #00ff7f, 0 0 20px #00ff7f;
+    }
+
+    .ring:nth-child(4) {
+      width: 230px;
+      height: 230px;
+      border-top-color: #ffd700;
+      animation-direction: reverse;
+      animation-duration: 2s;
+      box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    }
+
+    .ring:nth-child(5) {
+      width: 180px;
+      height: 180px;
+      border-top-color: #1e90ff;
+      animation-duration: 1.8s;
+      box-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
+    }
+
+    .ring:nth-child(6) {
+      width: 130px;
+      height: 130px;
+      border-top-color: #ff6347;
+      animation-direction: reverse;
+      animation-duration: 1.6s;
+      box-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
+    }
+
+    .ring:nth-child(7) {
+      width: 80px;
+      height: 80px;
+      border-top-color: #ffffff;
+      animation-duration: 1.2s;
+      box-shadow: 0 0 10px #ffffff, 0 0 25px #ffffff;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="illusion" id="illusion">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+  </div>
+
+  <script>
+    const illusion = document.getElementById('illusion');
+    const container = document.querySelector('.container');
+
+    container.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth - 0.5;
+      const y = e.clientY / window.innerHeight - 0.5;
+
+      const rotateX = y * 30;
+      const rotateY = x * -30;
+
+      illusion.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      illusion.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  </script>
+</body>
+</html>

@@ -10,7 +10,7 @@ Now instead of just copying and pasting a random file, you can know what animati
 | File          | Animation                  |
 |---------------|----------------------------|
 | A-1.html      | Neon Explosion             |
-| A-2.html      |                            |   
+| A-2.html      | Thermal Background         |   
 | A-3.html      |                            |
 | A-4.html      |                            |
 | A-5.html      |                            |

@@ -13,7 +13,7 @@ Now instead of just copying and pasting a random file, you can know what animati
 | A-2.html      | Thermal Background         |   
 | A-3.html      | Multiple Sepia Images      |
 | A-4.html      | Small Hyptonic Illusion    |
-| A-5.html      |                            |
+| A-5.html      | Large Hyptonic Illusion    |
 | A-6.html      |                            |
 | A-7.html      |                            |
 | A-8.html      |                            |

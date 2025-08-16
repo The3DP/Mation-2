@@ -12,7 +12,7 @@ Now instead of just copying and pasting a random file, you can know what animati
 | A-1.html      | Neon Explosion             |
 | A-2.html      | Thermal Background         |   
 | A-3.html      | Multiple Sepia Images      |
-| A-4.html      | Cool Illusion              |
+| A-4.html      | Small Hyptonic Illusion    |
 | A-5.html      |                            |
 | A-6.html      |                            |
 | A-7.html      |                            |

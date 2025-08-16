@@ -15,15 +15,13 @@ Now instead of just copying and pasting a random file, you can know what animati
 | A-8.html      |                            |
 | A-9.html      |                            |
 | A-10.html     |                            |
-| A-11.html     |                            |
-| A-12.html     |                            |
-| A-13.html     |                            |
-|   A-14.html   |                            |
-|               |                            |
-|               |                            |
-|               |                            |
-|               |                            |
-|               |                            |
-|               |                            |
-|               |                            |
-|               |                            |
+| A-11.html     |   - - -                    |
+| A-12.html     |   - - -                    |
+| A-13.html     |   - - -                    |
+| A-14.html     |   - - -                    |
+| A-15.html     |   - - -                    |
+| A-16.html     |   - - -                    |
+| A-17.html     |   - - -                    |
+| A-18.html     |   - - -                    |
+| A-19.html     |   - - -                    |
+| A-20.html     |   - - -                    |
